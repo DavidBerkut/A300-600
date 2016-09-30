@@ -37,30 +37,27 @@
 			<setting>0.596</setting>
 			<setting>0.745</setting>
 			<setting>1</setting>
-	
 		</flaps>
 	
 			<electrical>
 				<path></path>
 			</electrical>
+
 	<systems>	
             <path>Aircraft/A300-600/Systems/A300-systems.xml</path>
-	
-		<autopilot>
-				<name>Autopilot</name>
-				<path>Aircraft/A300-600/Systems/A300-autopilot.xml</path>
+				<name>IT-AUTOFLIGHT</name>
+				<path>Aircraft/A300-600/Systems/it-autoflight.xml</path>
 			</autopilot>
 			<autopilot>
-				<name>Autopilot helpers</name>
-				<path>Aircraft/Generic/generic-autopilot-helper.xml</path>
+				<name>IT-AUTOTHRUST</name>
+				<path>Aircraft/A300-600/Systems/it-autothrust.xml</path>
 			</autopilot>
 			<autopilot>
 				<name>Autobrake</name>
 				<path>Aircraft/A300-600/Systems/A300-autobrake.xml</path>
 			</autopilot>
-			
-
  	</systems>
+
 		<model>
 			<path>Aircraft/A300-600/Models/A300-603.xml</path>
 			<livery>
@@ -138,7 +135,7 @@
 	</weight>
 </payload>
 	</sim>
-	
+
 	<engines>
             <engine-start-switch type="int">1</engine-start-switch>
             <engine n="0">
@@ -155,12 +152,16 @@
 		</engine>
 	</engines>	
 	
-		<nasal>
+         <nasal>
 		<A300-600> 
-		  <file>Nasal/liveries603.nas</file>
-             <file>Aircraft/A300-600/Nasal/tyresmoke.nas</file>
+		      <file>Nasal/liveries600F.nas</file>
+                        <file>Aircraft/A300-600/Nasal/tyresmoke.nas</file>
+	               <file>Aircraft/A300-600/Nasal/systems.nas</file>
 		</A300-600>
-	</nasal> 
+	         <itaf>
+		      <file>Aircraft/A300-600/Nasal/it-autoflight.nas</file>
+	         </itaf>
+       </nasal>  
 
     <gear n="0">
         <gear n="0">

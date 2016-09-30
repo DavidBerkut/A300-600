@@ -92,6 +92,7 @@
 		</default>
 		</menubar>
 </sim>
+
 <payload>
 	<weight>
 		<name type="string">Passengers and crew</name>
@@ -106,15 +107,42 @@
 		<min-lb type="double">0</min-lb>
 		<max-lb type="double">95000</max-lb>
 	</weight>
-
 </payload>
+
+<it-autoflight>
+	<settings>
+		<no-generics>1</no-generics>
+		<roll>
+			<umin>-0.10</umin>
+			<umax>0.10</umax>
+			<kp>0.03</kp>
+		</roll>
+		<pitch>
+			<umin>-0.05</umin>
+			<umax>0.05</umax>
+			<kp>-0.06</kp>
+		</pitch>
+		<flch>
+			<umin>-0.05</umin>
+			<umax>0.05</umax>
+			<kp>-0.06</kp>
+		</flch>
+		<gs>
+			<kp>0.10</kp>
+		</gs>
+	</settings>
+</it-autoflight>
 	
 	
 	<nasal>
 		<A300-600> 
-		  <file>Nasal/liveries600F.nas</file>
-             <file>Aircraft/A300-600/Nasal/tyresmoke.nas</file>
+		       <file>Nasal/liveries600F.nas</file>
+                         <file>Aircraft/A300-600/Nasal/tyresmoke.nas</file>
+	                <file>Aircraft/A300-600/Nasal/systems.nas</file>
 		</A300-600>
+	     <itaf>
+		  <file>Aircraft/A300-600/Nasal/it-autoflight.nas</file>
+	     </itaf>
 	</nasal> 
 	
 

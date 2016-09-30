@@ -4,14 +4,13 @@
  <sim>
 	<systems>	
             <path>Aircraft/A300-600/Systems/A300-systems.xml</path>
-	
-		<autopilot>
-				<name>Autopilot</name>
-				<path>Aircraft/A300-600/Systems/A300-autopilot.xml</path>
+			<autopilot>
+				<name>IT-AUTOFLIGHT</name>
+				<path>Aircraft/A300-600/Systems/it-autoflight.xml</path>
 			</autopilot>
 			<autopilot>
-				<name>Autopilot helpers</name>
-				<path>Aircraft/Generic/generic-autopilot-helper.xml</path>
+				<name>IT-AUTOTHRUST</name>
+				<path>Aircraft/A300-600/Systems/it-autothrust.xml</path>
 			</autopilot>
 			<autopilot>
 				<name>Autobrake</name>
@@ -72,6 +71,29 @@ settimer(start2, 16);</script>
 		</engine>
 	</engines>	
 	
+<it-autoflight>
+	<settings>
+		<no-generics>1</no-generics>
+		<roll>
+			<umin>-0.10</umin>
+			<umax>0.10</umax>
+			<kp>0.03</kp>
+		</roll>
+		<pitch>
+			<umin>-0.05</umin>
+			<umax>0.05</umax>
+			<kp>-0.06</kp>
+		</pitch>
+		<flch>
+			<umin>-0.05</umin>
+			<umax>0.05</umax>
+			<kp>-0.06</kp>
+		</flch>
+		<gs>
+			<kp>0.10</kp>
+		</gs>
+	</settings>
+</it-autoflight>
 
     <gear n="0">
         <gear n="0">
