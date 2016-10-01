@@ -53,42 +53,6 @@
     </axis>
   </animation>
 
-<!--Gear Front-->
-<animation>
- <type>rotate</type>
- <object-name>gear_front</object-name>  
- <object-name>gear_front_leg</object-name> 
- <property>gear/gear[0]/position-norm</property>  
- <interpolation>
-   <entry>
-    <ind>0.0</ind>
-    <dep>110</dep>
-   </entry>
-   <entry>
-    <ind>0.1</ind>
-    <dep>110</dep>
-   </entry>
-   <entry>
-    <ind>0.8</ind>
-    <dep>0</dep>
-   </entry>
-   <entry>
-    <ind>1.0</ind>
-    <dep>0</dep>
-   </entry>
- </interpolation>
- <center>
-  <x-m>-13.87123</x-m>
-  <y-m>0.0</y-m>
-  <z-m>-1.95457</z-m>
- </center>
- <axis>
-  <x>0</x>
-  <y>1</y>
-  <z>0</z>
- </axis>
-</animation>
-
 <!--Cover Front-->
 <animation>
  <type>rotate</type>
@@ -237,6 +201,7 @@
     <name>Lgears</name>
     <object-name>GR1L</object-name>
     <object-name>GR2L</object-name>
+    <object-name>GR2L2</object-name>
 	<object-name>GLS1</object-name>
     <object-name>GLS2</object-name>
 	<object-name>GLS3</object-name>
@@ -256,6 +221,7 @@
     <name>Rgears</name>
     <object-name>GR1R</object-name>
     <object-name>GR2R</object-name>
+    <object-name>GR2R2</object-name>
 	<object-name>GRS1</object-name>
     <object-name>GRS2</object-name>
 	<object-name>GRS3</object-name>
@@ -314,9 +280,9 @@
     <object-name>FSgears</object-name>
     <property>gear/gear[0]/steering-norm</property>
     <interpolation>
+		<entry><ind>-1.0</ind><dep>-70</dep></entry>
 		<entry><ind>0.0</ind><dep>0</dep></entry>
-		<entry><ind>-1.0</ind><dep>70</dep></entry>
-		<entry><ind>1.0</ind><dep>-70</dep></entry>
+		<entry><ind>1.0</ind><dep>70</dep></entry>
     </interpolation>
     <center>
       <x-m> -14.2399 </x-m>
@@ -375,6 +341,26 @@
   
   
   <!--Left Gears -->
+  
+	 <animation>
+		<type>rotate</type>
+		<object-name>WHL1</object-name>
+		<object-name>WHL2</object-name>
+		<object-name>GR2L2</object-name>
+		<property>/sim/multiplay/generic/float[4]</property>
+		<factor>-1</factor>
+		<center>
+		    <x-m>4.74</x-m>
+		    <y-m>0</y-m>
+		    <z-m>-4.49</z-m>
+		</center>
+		<axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+		</axis>
+	</animation>
+  
   <animation>
     <type>rotate</type>
     <object-name>Lgears</object-name>
@@ -408,6 +394,26 @@
    </animation>
  
   <!--Right Gears -->  
+  
+	 <animation>
+		<type>rotate</type>
+		<object-name>WHR1</object-name>
+		<object-name>WHR2</object-name>
+		<object-name>GR2R2</object-name>
+		<property>/sim/multiplay/generic/float[4]</property>
+		<factor>-1</factor>
+		<center>
+		    <x-m>4.74</x-m>
+		    <y-m>0</y-m>
+		    <z-m>-4.49</z-m>
+		</center>
+		<axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+		</axis>
+	</animation>
+  
   <animation>
     <type>rotate</type>
     <object-name>Rgears</object-name>

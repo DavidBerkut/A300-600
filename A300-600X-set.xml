@@ -54,6 +54,24 @@ settimer(start2, 16);</script>
 		  </menu>
 		</default>
 		</menubar>
+
+        <multiplay>
+            <generic>
+
+                <float n="0" alias="/gear/gear[0]/compression-m"/>
+                <float n="1" alias="/gear/gear[1]/compression-m"/>
+                <float n="2" alias="/gear/gear[2]/compression-m"/>
+                <float n="3" alias="/gear/gear[0]/steering-norm"/>
+                <float n="4" alias="/gear/gear[1]/angle-deg"/>
+                <float n="5" alias="/gear/gear[2]/angle-deg"/>
+                <float n="6" alias="/surface-positions/speedbrake-pos-norm"/>
+                <float n="11" alias="/gear/gear[0]/rollspeed-ms"/>
+                <float n="12" alias="/gear/gear[1]/rollspeed-ms"/>
+                <float n="13" alias="/gear/gear[2]/rollspeed-ms"/>
+                <string  alias="/sim/multiplay/callsign"/>
+            </generic>
+        </multiplay>		
+		
 </sim>
 	<engines>
             <engine-start-switch type="int">1</engine-start-switch>
@@ -75,18 +93,19 @@ settimer(start2, 16);</script>
 	<settings>
 		<no-generics>1</no-generics>
 		<roll>
-			<umin>-0.10</umin>
-			<umax>0.10</umax>
+			<umin>-0.2</umin>
+			<umax>0.2</umax>
 			<kp>0.03</kp>
+			<kp-vorloc>0.01</kp-vorloc>
 		</roll>
 		<pitch>
-			<umin>-0.05</umin>
-			<umax>0.05</umax>
+			<umin>-0.2</umin>
+			<umax>0.2</umax>
 			<kp>-0.06</kp>
 		</pitch>
 		<flch>
-			<umin>-0.05</umin>
-			<umax>0.05</umax>
+			<umin>-0.2</umin>
+			<umax>0.2</umax>
 			<kp>-0.06</kp>
 		</flch>
 		<gs>
@@ -113,5 +132,4 @@ settimer(start2, 16);</script>
             <spray-density type="double">0</spray-density>
         </gear>
     </gear>
-
 </PropertyList>

@@ -19,7 +19,7 @@
 		 <cockpit type="int">3</cockpit>
 		 <model type="int">4</model>
 		</rating>
-		<author>Models: Toryx, Airbus330, Pierre Duval; Flightdeck: Pierre Duval</author>
+		<author>Models: Toryx, Airbus330, Pierre Duval; Flightdeck: Pierre Duval Joshua Davidson (it0uchpods/411): Flightdeck, Autopilot, Systems</author>
 		<flight-model>jsb</flight-model>
 		<aero>A300-600F</aero>
 		<variant>600F</variant>
@@ -67,7 +67,7 @@
 		   <internal archive="y">true</internal>
 			<config>
 			 <x-offset-m archive="y">-0.5688</x-offset-m>
-			 <y-offset-m archive="y">0.75</y-offset-m>
+			 <y-offset-m archive="y">0.94</y-offset-m>
 			 <z-offset-m archive="y">-17.3</z-offset-m>
 			 <pitch-offset-deg archive="y">-5.0</pitch-offset-deg>
 			  <default-field-of-view-deg type="double">80.0</default-field-of-view-deg>
@@ -91,6 +91,8 @@
 		  </menu>
 		</default>
 		</menubar>
+		
+        <flight-recorder include="Systems/flight-recorder.xml"/>
 </sim>
 
 <payload>
@@ -108,41 +110,23 @@
 		<max-lb type="double">95000</max-lb>
 	</weight>
 </payload>
-
-<it-autoflight>
-	<settings>
-		<no-generics>1</no-generics>
-		<roll>
-			<umin>-0.10</umin>
-			<umax>0.10</umax>
-			<kp>0.03</kp>
-		</roll>
-		<pitch>
-			<umin>-0.05</umin>
-			<umax>0.05</umax>
-			<kp>-0.06</kp>
-		</pitch>
-		<flch>
-			<umin>-0.05</umin>
-			<umax>0.05</umax>
-			<kp>-0.06</kp>
-		</flch>
-		<gs>
-			<kp>0.10</kp>
-		</gs>
-	</settings>
-</it-autoflight>
 	
 	
 	<nasal>
 		<A300-600> 
-		       <file>Nasal/liveries600F.nas</file>
-                         <file>Aircraft/A300-600/Nasal/tyresmoke.nas</file>
-	                <file>Aircraft/A300-600/Nasal/systems.nas</file>
+		    <file>Nasal/liveries600F.nas</file>
+            <file>Aircraft/A300-600/Nasal/tyresmoke.nas</file>
+	        <file>Aircraft/A300-600/Nasal/systems.nas</file>
+	        <file>Aircraft/A300-600/Nasal/gear-tilt.nas</file>
+	        <file>Aircraft/A300-600/Nasal/electrical.nas</file>
+		    <file>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Instruments/ND/ND.nas</file>
 		</A300-600>
 	     <itaf>
 		  <file>Aircraft/A300-600/Nasal/it-autoflight.nas</file>
 	     </itaf>
+		<reversethrust>
+			<file>Aircraft/A300-600/Nasal/reverse-thrust.nas</file>
+		</reversethrust>
 	</nasal> 
 	
 

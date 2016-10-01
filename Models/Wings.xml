@@ -326,7 +326,12 @@
     <object-name>sp4L</object-name>
     <object-name>sp5L</object-name>
     <property>fdm/jsbsim/fcs/left-aileron-pos-norm</property>
-    <factor> -45 </factor>
+    <interpolation>
+      <entry><ind>  -1</ind><dep> 30</dep></entry>
+      <entry><ind>-0.1</ind><dep>  0</dep></entry>
+      <entry><ind>   0</ind><dep>  0</dep></entry>
+      <entry><ind>   1</ind><dep>  0</dep></entry>
+    </interpolation>
     <axis>
       <x1-m>  6.301 </x1-m>
       <y1-m> -10.455 </y1-m>
@@ -334,12 +339,7 @@
       <x2-m>  9.130 </x2-m>
       <y2-m> -17.580 </y2-m>
       <z2-m>  0.243 </z2-m>
-    </axis>    <condition>
-      <less-than-equals>
-        <property>fdm/jsbsim/fcs/left-aileron-pos-norm</property>
-        <value>0</value>
-     </less-than-equals>
-   </condition>
+    </axis>
   </animation>
  
   <animation>
@@ -455,7 +455,12 @@
     <object-name>sp4R</object-name>
     <object-name>sp5R</object-name>
     <property>fdm/jsbsim/fcs/left-aileron-pos-norm</property>
-    <factor>-45</factor>
+    <interpolation>
+      <entry><ind>   1</ind><dep>-30</dep></entry>
+      <entry><ind> 0.1</ind><dep>  0</dep></entry>
+      <entry><ind>   0</ind><dep>  0</dep></entry>
+      <entry><ind>  -1</ind><dep>  0</dep></entry>
+    </interpolation>
     <axis>
       <x1-m>  6.301 </x1-m>
       <y1-m> 10.455 </y1-m>
